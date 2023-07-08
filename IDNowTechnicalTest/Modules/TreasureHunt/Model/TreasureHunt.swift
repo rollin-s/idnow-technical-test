@@ -8,6 +8,6 @@
 import Foundation
 
 struct TreasureHuntGame: Codable, Equatable, Identifiable {
-    var id: String
+    var id: UUID
     var title: String
 }

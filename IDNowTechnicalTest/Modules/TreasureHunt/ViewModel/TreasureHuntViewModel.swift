@@ -25,14 +25,12 @@ extension TreasureHuntScreen {
         
         // MARK: - Side Effects
         
-        /// Get list of all treasure hunt games
-        func getCurrentGames() {
-            container.services.treasureHuntService
-                .newTreasureHunt()
-        }
-        
         /// Create a new game and add it in the games array
         func createNewGame() {
+            container
+                .services
+                .treasureHuntService
+                .createNewGame(games: loadableSubject(\.games))
         }
     }
 }

@@ -25,22 +25,22 @@ struct TreasureHuntScreen: View {
     }
     
     @ViewBuilder private var content: some View {
-        Text("Coucou")
-//        VStack {
-//            switch viewModel.games {
-//            case .notRequested:
-//                notRequestedView
-//            case let .isLoading(last, _):
-//                loadingView(last)
-//            case let .loaded(countries):
-//                loadedView(countries, showSearch: true, showLoading: false)
-//            case let .failed(error):
-//                failedView(error)
-//            }
-//            Button("Create a new treasure hunt") {
-//                viewModel.createNewGame()
-//            }
-//        }
+        VStack {
+            switch viewModel.games {
+            case .notRequested:
+                notRequestedView
+            case let .isLoading(last):
+                loadingView(last)
+            case let .loaded(countries):
+                loadedView(countries, showLoading: false)
+            case let .failed(error):
+                failedView(error)
+            }
+            Spacer()
+            Button("Create a new treasure hunt") {
+                viewModel.createNewGame()
+            }
+        }
     }
 }
 
@@ -48,7 +48,7 @@ struct TreasureHuntScreen: View {
 
 private extension TreasureHuntScreen {
     var notRequestedView: some View {
-        Text("").onAppear(perform: self.viewModel.getCurrentGames)
+        Text("") // We don't need any NotRequestView in our case, but might be usefull if we have a list loader first
     }
     
     func loadingView(_ previouslyLoaded: [TreasureHuntGame]?) -> some View {
@@ -61,7 +61,7 @@ private extension TreasureHuntScreen {
     
     func failedView(_ error: Error) -> some View {
         ErrorView(error: error, retryAction: {
-            self.viewModel.getCurrentGames()
+            /// No need  of an error handler for the demo purpose, but we could retry the API calls if needed
         })
     }
 }

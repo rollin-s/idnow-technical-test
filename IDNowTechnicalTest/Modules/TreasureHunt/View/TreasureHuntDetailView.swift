@@ -19,5 +19,6 @@ struct TreasureHuntDetailView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: 60, alignment: .leading)
+        .background(Color.blue)
     }
 }
