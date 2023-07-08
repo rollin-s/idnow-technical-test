@@ -77,7 +77,9 @@ private extension TreasureHuntScreen {
                         container: viewModel.container
                     )
                 )
+                .padding(4)
             }
+            .padding(12)
         }
     }
 }
