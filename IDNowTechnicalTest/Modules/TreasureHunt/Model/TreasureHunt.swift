@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct TreasureHuntGame: Codable, Equatable, Identifiable {
-    var id: UUID
+struct TreasureHuntGame: Codable, Equatable {
+    var uid: UUID
     var title: String
+}
+
+extension TreasureHuntGame: Identifiable {
+    var id: String { uid.uuidString }
 }

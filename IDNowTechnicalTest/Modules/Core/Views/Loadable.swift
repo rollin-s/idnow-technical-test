@@ -14,14 +14,14 @@ typealias LoadableSubject<Value> = Binding<Loadable<Value>>
 ///
 enum Loadable<T> {
     case notRequested
-    case isLoading(last: T?)
+    case isLoading(last: T?, cancelBag: CancelBag)
     case loaded(T)
     case failed(Error)
 
     var value: T? {
         switch self {
         case let .loaded(value): return value
-        case let .isLoading(last): return last
+        case let .isLoading(last, _): return last
         default: return nil
         }
     }
@@ -34,8 +34,29 @@ enum Loadable<T> {
 }
 
 extension Loadable {
-    mutating func setIsLoading() {
-        self = .isLoading(last: value)
+    /// When a subscriber  is loading, we attach a cancelBag on the Loadable object so we can cancel it anytime directly from the front.
+    mutating func setIsLoading(cancelBag: CancelBag) {
+        self = .isLoading(last: value, cancelBag: cancelBag)
+    }
+    
+    /// If we might want to cancel a loading, we store the cancelBag linked to the subscriber in the Loadable object
+    /// We can them cancel the subscriber directly from the View
+    /// I don't use it in my demo, but we could really use it easily
+    mutating func cancelLoading() {
+        switch self {
+        case let .isLoading(last, cancelBag):
+            cancelBag.cancel()
+            if let last = last {
+                self = .loaded(last)
+            } else {
+                let error = NSError(
+                    domain: NSCocoaErrorDomain, code: NSUserCancelledError,
+                    userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Canceled by user",
+                                                                            comment: "")])
+                self = .failed(error)
+            }
+        default: break
+        }
     }
     
     func map<V>(_ transform: (T) throws -> V) -> Loadable<V> {
@@ -43,8 +64,9 @@ extension Loadable {
             switch self {
             case .notRequested: return .notRequested
             case let .failed(error): return .failed(error)
-            case let .isLoading(value):
-                return .isLoading(last: try value.map { try transform($0) })
+            case let .isLoading(value, cancelBag):
+                return .isLoading(last: try value.map { try transform($0) }
+                                  , cancelBag: cancelBag)
             case let .loaded(value):
                 return .loaded(try transform(value))
             }
@@ -69,7 +91,7 @@ extension Loadable: Equatable where T: Equatable {
     static func == (lhs: Loadable<T>, rhs: Loadable<T>) -> Bool {
         switch (lhs, rhs) {
         case (.notRequested, .notRequested): return true
-        case let (.isLoading(lhsV), .isLoading(rhsV)): return lhsV == rhsV
+        case let (.isLoading(lhsV, _), .isLoading(rhsV, _)): return lhsV == rhsV
         case let (.loaded(lhsV), .loaded(rhsV)): return lhsV == rhsV
         case let (.failed(lhsE), .failed(rhsE)):
             return lhsE.localizedDescription == rhsE.localizedDescription

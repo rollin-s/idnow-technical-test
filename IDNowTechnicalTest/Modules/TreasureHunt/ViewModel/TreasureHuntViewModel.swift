@@ -13,7 +13,6 @@ extension TreasureHuntScreen {
         
         // State
         @Published var games: Loadable<[TreasureHuntGame]>
-        @Published var canRequestPushPermission: Bool = false        
     
         // Misc
         let container: DIInjector

@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 protocol TreasureHuntRepository: IDApiClientRepository {
-    func createNewGame() -> AnyPublisher<TreasureHuntGame, Error>
-    func subscribeToGame(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
+    func createNewGame() -> AnyPublisher<[TreasureHuntGame], Error>
+    func startSearchingTreasure(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
 }
 
 /// API example of some e
@@ -26,11 +26,11 @@ struct ApiTreasureHuntRepository: TreasureHuntRepository {
         self.baseURL = baseURL
     }
     
-    func createNewGame() -> AnyPublisher<TreasureHuntGame, Error> {
+    func createNewGame() -> AnyPublisher<[TreasureHuntGame], Error> {
         return call(endpoint: API.createGame)
     }
 
-    func subscribeToGame(game: TreasureHuntGame) -> AnyPublisher<Bool, Error> {
+    func startSearchingTreasure(game: TreasureHuntGame) -> AnyPublisher<Bool, Error> {
         return call(endpoint: API.subscribeToGame(game))
     }
 }
@@ -50,7 +50,7 @@ extension ApiTreasureHuntRepository.API: APICall {
         case .createGame:
             return "/game"
         case let .subscribeToGame(game):
-            let encodedName = game.id.uuidString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            let encodedName = game.uid.uuidString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             return "/game/\(encodedName ?? "")" ///  Might want to add a fallback if a game doesn't have an ID. This shouldn't happend.
         }
     }
