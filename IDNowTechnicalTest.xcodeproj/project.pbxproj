@@ -11,6 +11,9 @@
 		6E086B352A58481700049AEE /* TreasureHunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E086B342A58481700049AEE /* TreasureHunt.swift */; };
 		6E619D642A599CC900BEA8FC /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D632A599CC900BEA8FC /* TestHelpers.swift */; };
 		6E619D662A599D6600BEA8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D652A599D6600BEA8FC /* AppDelegate.swift */; };
+		6E619D682A59A60B00BEA8FC /* ApiClientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D672A59A60B00BEA8FC /* ApiClientHelper.swift */; };
+		6E619D6A2A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D692A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift */; };
+		6E619D6C2A59B76300BEA8FC /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D6B2A59B76300BEA8FC /* CancelBag.swift */; };
 		6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65C8632A571A1C0009C785 /* ContentView.swift */; };
 		6E65C8662A571A1E0009C785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8652A571A1E0009C785 /* Assets.xcassets */; };
 		6E65C86A2A571A1E0009C785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8692A571A1E0009C785 /* Preview Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		6E086B342A58481700049AEE /* TreasureHunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHunt.swift; sourceTree = "<group>"; };
 		6E619D632A599CC900BEA8FC /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		6E619D652A599D6600BEA8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E619D672A59A60B00BEA8FC /* ApiClientHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientHelper.swift; sourceTree = "<group>"; };
+		6E619D692A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTreasureHuntRepository.swift; sourceTree = "<group>"; };
+		6E619D6B2A59B76300BEA8FC /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDNowTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E65C8632A571A1C0009C785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E65C8652A571A1E0009C785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			children = (
 				6E65C8752A573A360009C785 /* Model */,
 				6E65C8762A573A4D0009C785 /* ApiClientRepository.swift */,
+				6E619D672A59A60B00BEA8FC /* ApiClientHelper.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 				6E65C87A2A573BD40009C785 /* Screen */,
 				6E65C88A2A5740210009C785 /* TreasureHuntService.swift */,
 				6E086B322A58436E00049AEE /* TreasureHuntRepository.swift */,
+				6E619D692A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift */,
 			);
 			path = TreasureHunt;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				6E65C88C2A57465F0009C785 /* AppState.swift */,
+				6E619D6B2A59B76300BEA8FC /* CancelBag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E619D6C2A59B76300BEA8FC /* CancelBag.swift in Sources */,
 				6E65C8772A573A4D0009C785 /* ApiClientRepository.swift in Sources */,
 				6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */,
 				6EFE06422A5965F600B4E02C /* Optional+Extension.swift in Sources */,
@@ -312,6 +322,8 @@
 				6EFE06462A5968E400B4E02C /* ErrorView.swift in Sources */,
 				6E65C8852A573DEB0009C785 /* AppEnvironment.swift in Sources */,
 				6E65C88D2A57465F0009C785 /* AppState.swift in Sources */,
+				6E619D682A59A60B00BEA8FC /* ApiClientHelper.swift in Sources */,
+				6E619D6A2A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift in Sources */,
 				6E65C8892A573FFB0009C785 /* AppServices.swift in Sources */,
 				6E086B352A58481700049AEE /* TreasureHunt.swift in Sources */,
 				6E65C8872A573ECE0009C785 /* DIInjector.swift in Sources */,

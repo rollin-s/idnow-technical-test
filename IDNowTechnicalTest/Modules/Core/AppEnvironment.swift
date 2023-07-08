@@ -20,7 +20,7 @@ extension AppEnvironment {
     static func startApp() -> AppEnvironment {
         let appState = AppState()
         let session = configuredURLSession()
-        let webRepositories = configuredWebRepositories(session: session)
+        let webRepositories = configuredFakeWebRepositories(session: session)
         let services = configuredServices(appState: appState,
                                                 webRepositories: webRepositories)
         let diContainer = DIInjector(appState: appState, services: services)
@@ -39,12 +39,23 @@ extension AppEnvironment {
     }
     
     /// Configure all the web API needed and return add them in the DIInjector
+    /// Not used on the demo but I added it to add comprehension
     private static func configuredWebRepositories(session: URLSession) -> DIInjector.WebRepositories {
         let treasureHuntWebRepository = ApiTreasureHuntRepository(
             session: session,
             baseURL: "https://my.treasure.api.com/v2")
         return .init(treasureHuntRepository: treasureHuntWebRepository)
     }
+    
+    /// Create the fake web repositories for the technical test.
+    /// We only have one API, but we can add as much as needed
+    private static func configuredFakeWebRepositories(session: URLSession) -> DIInjector.WebRepositories {
+        let fakeTreasureHuntWebRepository = FakeTreasureHuntRepository  (
+            session: session,
+            baseURL: "notUsedOnDemo")
+        return .init(treasureHuntRepository: fakeTreasureHuntWebRepository)
+    }
+    
     
     /// Configure all the services of the application.
     /// If you add a new module, don't forget to add the service in here

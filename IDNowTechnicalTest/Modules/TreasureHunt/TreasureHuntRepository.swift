@@ -10,13 +10,15 @@ import Combine
 
 protocol TreasureHuntRepository: IDApiClientRepository {
     func createNewGame() -> AnyPublisher<TreasureHuntGame, Error>
-    func waitForWin(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
+    func subscribeToGame(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
 }
 
+/// API example of some e
 struct ApiTreasureHuntRepository: TreasureHuntRepository {
     
     let session: URLSession
     let baseURL: String
+    /// Thread management for API calls. This could be highly improved, but I've added it here for and example of improvement in the demo
     let bgQueue = DispatchQueue(label: "bg_parse_queue")
     
     init(session: URLSession, baseURL: String) {
@@ -28,16 +30,8 @@ struct ApiTreasureHuntRepository: TreasureHuntRepository {
         return call(endpoint: API.createGame)
     }
 
-    func waitForWin(game: TreasureHuntGame) -> AnyPublisher<Bool, Error> {
-        return call(endpoint: API.waitForWin(game))
-//        let request: AnyPublisher<Bool, Error> = call(endpoint: API.countryDetails(country))
-//        return request
-//            .tryMap { array -> Country.Details.Intermediate in
-//                guard let details = array.first
-//                    else { throw APIError.unexpectedResponse }
-//                return details
-//            }
-//            .eraseToAnyPublisher()
+    func subscribeToGame(game: TreasureHuntGame) -> AnyPublisher<Bool, Error> {
+        return call(endpoint: API.subscribeToGame(game))
     }
 }
 
@@ -46,7 +40,7 @@ struct ApiTreasureHuntRepository: TreasureHuntRepository {
 extension ApiTreasureHuntRepository {
     enum API {
         case createGame
-        case waitForWin(TreasureHuntGame)
+        case subscribeToGame(TreasureHuntGame)
     }
 }
 
@@ -55,8 +49,8 @@ extension ApiTreasureHuntRepository.API: APICall {
         switch self {
         case .createGame:
             return "/game"
-        case let .waitForWin(game):
-            let encodedName = game.id.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        case let .subscribeToGame(game):
+            let encodedName = game.id.uuidString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             return "/game/\(encodedName ?? "")" ///  Might want to add a fallback if a game doesn't have an ID. This shouldn't happend.
         }
     }
@@ -64,7 +58,7 @@ extension ApiTreasureHuntRepository.API: APICall {
         switch self {
         case .createGame:
             return "PUT"
-        case .waitForWin(_):
+        case .subscribeToGame(_):
             return "GET"
         }
     }

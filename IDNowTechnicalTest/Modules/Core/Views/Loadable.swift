@@ -34,7 +34,6 @@ enum Loadable<T> {
 }
 
 extension Loadable {
-    
     mutating func setIsLoading() {
         self = .isLoading(last: value)
     }
@@ -76,5 +75,18 @@ extension Loadable: Equatable where T: Equatable {
             return lhsE.localizedDescription == rhsE.localizedDescription
         default: return false
         }
+    }
+}
+
+extension ObservableObject {
+    /// Create a loadbleObject directly from a key from the viewModel
+    /// Mainly used for lisibility purpose
+    func loadableSubject<Value>(_ keyPath: WritableKeyPath<Self, Loadable<Value>>) -> LoadableSubject<Value> {
+        let defaultValue = self[keyPath: keyPath]
+        return .init(get: { [weak self] in
+            self?[keyPath: keyPath] ?? defaultValue
+        }, set: { [weak self] in
+            self?[keyPath: keyPath] = $0
+        })
     }
 }
