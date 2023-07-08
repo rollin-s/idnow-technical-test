@@ -7,6 +7,9 @@
 
 import Combine
 
+
+/// A help class to handle cancelation of API calls or anything related in the repositories
+/// Mainly used with the Loadable 
 final class CancelBag {
     fileprivate(set) var subscriptions = Set<AnyCancellable>()
     

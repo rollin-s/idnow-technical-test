@@ -29,7 +29,7 @@ struct TreasureHuntScreen: View {
             switch viewModel.games {
             case .notRequested:
                 notRequestedView
-            case let .isLoading(last):
+            case let .isLoading(last, _):
                 loadingView(last)
             case let .loaded(countries):
                 loadedView(countries, showLoading: false)
@@ -52,11 +52,7 @@ private extension TreasureHuntScreen {
     }
     
     func loadingView(_ previouslyLoaded: [TreasureHuntGame]?) -> some View {
-        if let games = previouslyLoaded {
-            return AnyView(loadedView(games, showLoading: true))
-        } else {
-            return AnyView(ActivityIndicatorView().padding())
-        }
+        return AnyView(ActivityIndicatorView().padding())
     }
     
     func failedView(_ error: Error) -> some View {
@@ -75,7 +71,12 @@ private extension TreasureHuntScreen {
                 ActivityIndicatorView().padding()
             }
             List(games) { game in
-                TreasureHuntDetailView(game: game)
+                TreasureHuntDetailView(
+                    game: game,
+                    viewModel: .init(
+                        container: viewModel.container
+                    )
+                )
             }
         }
     }
