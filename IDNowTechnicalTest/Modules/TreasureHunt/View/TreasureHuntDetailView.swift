@@ -24,12 +24,12 @@ struct TreasureHuntDetailView: View, Identifiable {
     var body: some View {
         VStack(alignment: .leading) {
             Text(game.title)
-                .font(.title)
+                .font(.body)
+                .frame(alignment: .center)
             content
         }
         .padding()
         .frame(alignment: .leading)
-        .background(Color.blue)
     }
     
     
@@ -59,7 +59,8 @@ private extension TreasureHuntDetailView {
     }
     
     func loadingView(_ previouslyLoaded: Bool?) -> some View {
-        return AnyView(ActivityIndicatorView().padding().background(Color.red))
+        return PrettyHorizontalLoader()
+            .frame(height: 24)
     }
     
     func failedView(_ error: Error) -> some View {
@@ -70,13 +71,19 @@ private extension TreasureHuntDetailView {
 }
 
 private extension TreasureHuntDetailView {
-    func loadedView(wasTreasureFound: Bool) -> some View{
+    @ViewBuilder func loadedView(wasTreasureFound: Bool) -> some View{
+        /// i could create a specific view for the success/failure of the treasure, but it's getting late, and I think it's comprehensible
         if (wasTreasureFound) {
-            return Text("The treasure was found !! Congratulation")
-                .background(Color.green)
+            Text("The treasure was found !! Congratulation")
+                .padding(10)
+                .background(Color.Green.victoryGreen)
+                .cornerRadius(12)
+        } else {
+            
+            Text("You haven't found the treasure, it's gonna be lost forever now lads")
+                .padding(10)
+                .background(Color.Red.redFailure)
+                .cornerRadius(12)
         }
-        
-        return Text("You haven't found the treasure, it's gonna be lost forever now lads")
-            .background(Color.gray)
     }
 }

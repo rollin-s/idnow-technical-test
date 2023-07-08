@@ -60,7 +60,7 @@ extension FakeTreasureHuntRepository {
                 
                 // Create X treasures game
                 var treasureHunts: [TreasureHuntGame] = []
-                let randomNumber = Int.random(in: 1..<5)
+                let randomNumber = Int.random(in: 1..<10)
                 
                 for index in 0...randomNumber {
                     treasureHunts.append(
@@ -112,7 +112,9 @@ extension FakeTreasureHuntRepository {
                 // After a random time (between 5 and 25 seconds, the treasure will be found !
                 let randomTime = Double.random(in: 5..<25) // Random time interval in seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + randomTime) {
-                    _ = self.subscriber.receive(true) // Emit a random TreasureHunt
+                    let randomSuccess = Int.random(in: 0..<10) // Random time interval in seconds
+                    
+                    _ = self.subscriber.receive((randomSuccess % 5 != 0)) // Emit a random TreasureHunt
                     self.subscriber.receive(completion: .finished) // Indicate completion
                 }
             }
