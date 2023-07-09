@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Representation of a treasure hunt game. 
 struct TreasureHuntGame: Codable, Equatable {
     var uid: UUID
     var title: String

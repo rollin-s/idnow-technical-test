@@ -17,6 +17,7 @@
 		6E619D6E2A59BBE800BEA8FC /* TreasureHuntDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D6D2A59BBE800BEA8FC /* TreasureHuntDetailViewModel.swift */; };
 		6E619D702A59D35500BEA8FC /* PrettyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D6F2A59D35500BEA8FC /* PrettyLoader.swift */; };
 		6E619D722A59D45A00BEA8FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D712A59D45A00BEA8FC /* Colors.swift */; };
+		6E619D742A59F09200BEA8FC /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D732A59F09200BEA8FC /* PrettyButton.swift */; };
 		6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65C8632A571A1C0009C785 /* ContentView.swift */; };
 		6E65C8662A571A1E0009C785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8652A571A1E0009C785 /* Assets.xcassets */; };
 		6E65C86A2A571A1E0009C785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8692A571A1E0009C785 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		6E619D6D2A59BBE800BEA8FC /* TreasureHuntDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntDetailViewModel.swift; sourceTree = "<group>"; };
 		6E619D6F2A59D35500BEA8FC /* PrettyLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyLoader.swift; sourceTree = "<group>"; };
 		6E619D712A59D45A00BEA8FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6E619D732A59F09200BEA8FC /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
 		6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDNowTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E65C8632A571A1C0009C785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E65C8652A571A1E0009C785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				6EFE06452A5968E400B4E02C /* ErrorView.swift */,
 				6E619D6F2A59D35500BEA8FC /* PrettyLoader.swift */,
 				6E619D712A59D45A00BEA8FC /* Colors.swift */,
+				6E619D732A59F09200BEA8FC /* PrettyButton.swift */,
 			);
 			path = UIBundle;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				6E65C88D2A57465F0009C785 /* AppState.swift in Sources */,
 				6E619D682A59A60B00BEA8FC /* ApiClientHelper.swift in Sources */,
 				6E619D6E2A59BBE800BEA8FC /* TreasureHuntDetailViewModel.swift in Sources */,
+				6E619D742A59F09200BEA8FC /* PrettyButton.swift in Sources */,
 				6E619D6A2A59AAD600BEA8FC /* FakeTreasureHuntRepository.swift in Sources */,
 				6E65C8892A573FFB0009C785 /* AppServices.swift in Sources */,
 				6E086B352A58481700049AEE /* TreasureHunt.swift in Sources */,
