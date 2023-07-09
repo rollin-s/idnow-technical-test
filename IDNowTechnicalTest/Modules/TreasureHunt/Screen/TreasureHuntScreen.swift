@@ -14,14 +14,19 @@ import Combine
 struct TreasureHuntScreen: View {
     
     @ObservedObject private(set) var viewModel: ViewModel
-    
+    /// Broadcast the view to the Screen Test
+    let inspection = Inspection<Self>()
+
     var body: some View {
-        NavigationView {
-            self.content
-                .navigationBarTitle("Treasure Hunt")
-                .animation(.easeOut(duration: 0.3))
+        GeometryReader { _ in
+            NavigationView {
+                self.content
+                    .navigationBarTitle("Treasure Hunt")
+                    .animation(.easeOut(duration: 0.3))
+            }
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .onReceive(inspection.notice) { self.inspection.visit(self, $0) } // Broadcast the view to the UnitTest
     }
     
     @ViewBuilder private var content: some View {
@@ -48,7 +53,8 @@ struct TreasureHuntScreen: View {
 
 private extension TreasureHuntScreen {
     var notRequestedView: some View {
-        Text("") // We don't need any NotRequestView in our case, but might be usefull if we have a list loader first
+        TreasureHuntNotStarted()
+        // We don't need any NotRequestView in our case, but might be usefull if we have a list loader first
     }
     
     func loadingView(_ previouslyLoaded: [TreasureHuntGame]?) -> some View {

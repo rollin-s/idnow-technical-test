@@ -15,6 +15,8 @@ struct TreasureHuntDetailView: View, Identifiable {
     let game: TreasureHuntGame
     
     @ObservedObject private(set) var viewModel: ViewModel
+    /// Broadcast the view to the Screen Test
+    let inspection = Inspection<Self>()
     
     init(game: TreasureHuntGame, viewModel: ViewModel) {
         self.game = game
@@ -30,6 +32,7 @@ struct TreasureHuntDetailView: View, Identifiable {
         }
         .padding()
         .frame(alignment: .leading)
+        .onReceive(inspection.notice) {inspection.visit(self, $0) }
     }
     
     
