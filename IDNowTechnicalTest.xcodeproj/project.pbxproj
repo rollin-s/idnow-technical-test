@@ -18,6 +18,15 @@
 		6E619D702A59D35500BEA8FC /* PrettyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D6F2A59D35500BEA8FC /* PrettyLoader.swift */; };
 		6E619D722A59D45A00BEA8FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D712A59D45A00BEA8FC /* Colors.swift */; };
 		6E619D742A59F09200BEA8FC /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D732A59F09200BEA8FC /* PrettyButton.swift */; };
+		6E619D922A5AB4C700BEA8FC /* ViewInspectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619D912A5AB4C700BEA8FC /* ViewInspectionHelper.swift */; };
+		6E619DAA2A5ABCE300BEA8FC /* TreasureHuntScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DA92A5ABCE300BEA8FC /* TreasureHuntScreenTest.swift */; };
+		6E619DAD2A5ABD0A00BEA8FC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DAC2A5ABD0A00BEA8FC /* Mock.swift */; };
+		6E619DAF2A5ABD1000BEA8FC /* MockedServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DAE2A5ABD1000BEA8FC /* MockedServices.swift */; };
+		6E619DB22A5ABD3700BEA8FC /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DB12A5ABD3700BEA8FC /* TestHelpers.swift */; };
+		6E619DB52A5ABFC300BEA8FC /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 6E619DB42A5ABFC300BEA8FC /* ViewInspector */; };
+		6E619DB72A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DB62A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift */; };
+		6E619DB92A5AC56100BEA8FC /* MockedTreasureHunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DB82A5AC56100BEA8FC /* MockedTreasureHunt.swift */; };
+		6E619DBB2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DBA2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift */; };
 		6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65C8632A571A1C0009C785 /* ContentView.swift */; };
 		6E65C8662A571A1E0009C785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8652A571A1E0009C785 /* Assets.xcassets */; };
 		6E65C86A2A571A1E0009C785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8692A571A1E0009C785 /* Preview Assets.xcassets */; };
@@ -38,6 +47,16 @@
 		6EFE06482A5969A300B4E02C /* TreasureHuntDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE06472A5969A300B4E02C /* TreasureHuntDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6E619DA12A5ABC9900BEA8FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E65C8562A571A1C0009C785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E65C85D2A571A1C0009C785;
+			remoteInfo = IDNowTechnicalTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6E086B322A58436E00049AEE /* TreasureHuntRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntRepository.swift; sourceTree = "<group>"; };
 		6E086B342A58481700049AEE /* TreasureHunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHunt.swift; sourceTree = "<group>"; };
@@ -50,6 +69,15 @@
 		6E619D6F2A59D35500BEA8FC /* PrettyLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyLoader.swift; sourceTree = "<group>"; };
 		6E619D712A59D45A00BEA8FC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6E619D732A59F09200BEA8FC /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
+		6E619D912A5AB4C700BEA8FC /* ViewInspectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInspectionHelper.swift; sourceTree = "<group>"; };
+		6E619D9D2A5ABC9900BEA8FC /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E619DA92A5ABCE300BEA8FC /* TreasureHuntScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntScreenTest.swift; sourceTree = "<group>"; };
+		6E619DAC2A5ABD0A00BEA8FC /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		6E619DAE2A5ABD1000BEA8FC /* MockedServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedServices.swift; sourceTree = "<group>"; };
+		6E619DB12A5ABD3700BEA8FC /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		6E619DB62A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntNotStartedView.swift; sourceTree = "<group>"; };
+		6E619DB82A5AC56100BEA8FC /* MockedTreasureHunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedTreasureHunt.swift; sourceTree = "<group>"; };
+		6E619DBA2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntDetailViewScreenTest.swift; sourceTree = "<group>"; };
 		6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDNowTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E65C8632A571A1C0009C785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E65C8652A571A1E0009C785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +102,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E619D9A2A5ABC9900BEA8FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E619DB52A5ABFC300BEA8FC /* ViewInspector in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E65C85B2A571A1C0009C785 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,12 +120,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E619D962A5ABBE500BEA8FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E619D9E2A5ABC9900BEA8FC /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E619DAB2A5ABD0100BEA8FC /* Mock */,
+				6E619DA82A5ABCCF00BEA8FC /* UI */,
+				6E619DB12A5ABD3700BEA8FC /* TestHelpers.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		6E619DA82A5ABCCF00BEA8FC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6E619DA92A5ABCE300BEA8FC /* TreasureHuntScreenTest.swift */,
+				6E619DBA2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6E619DAB2A5ABD0100BEA8FC /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				6E619DAC2A5ABD0A00BEA8FC /* Mock.swift */,
+				6E619DAE2A5ABD1000BEA8FC /* MockedServices.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		6E65C8552A571A1C0009C785 = {
 			isa = PBXGroup;
 			children = (
 				6E65C8742A5739C50009C785 /* ReadMe.md */,
 				6E65C8602A571A1C0009C785 /* IDNowTechnicalTest */,
+				6E619D9E2A5ABC9900BEA8FC /* UnitTests */,
 				6E65C85F2A571A1C0009C785 /* Products */,
+				6E619D962A5ABBE500BEA8FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */,
+				6E619D9D2A5ABC9900BEA8FC /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				6EFE06472A5969A300B4E02C /* TreasureHuntDetailView.swift */,
+				6E619DB62A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				6E086B342A58481700049AEE /* TreasureHunt.swift */,
+				6E619DB82A5AC56100BEA8FC /* MockedTreasureHunt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				6EFE063C2A5964A400B4E02C /* Loadable.swift */,
+				6E619D912A5AB4C700BEA8FC /* ViewInspectionHelper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +330,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E619D9C2A5ABC9900BEA8FC /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E619DA32A5ABC9900BEA8FC /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				6E619D992A5ABC9900BEA8FC /* Sources */,
+				6E619D9A2A5ABC9900BEA8FC /* Frameworks */,
+				6E619D9B2A5ABC9900BEA8FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E619DA22A5ABC9900BEA8FC /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			packageProductDependencies = (
+				6E619DB42A5ABFC300BEA8FC /* ViewInspector */,
+			);
+			productName = UnitTests;
+			productReference = 6E619D9D2A5ABC9900BEA8FC /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6E65C85D2A571A1C0009C785 /* IDNowTechnicalTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E65C86D2A571A1E0009C785 /* Build configuration list for PBXNativeTarget "IDNowTechnicalTest" */;
@@ -266,6 +364,8 @@
 			dependencies = (
 			);
 			name = IDNowTechnicalTest;
+			packageProductDependencies = (
+			);
 			productName = IDNowTechnicalTest;
 			productReference = 6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +380,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					6E619D9C2A5ABC9900BEA8FC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 6E65C85D2A571A1C0009C785;
+					};
 					6E65C85D2A571A1C0009C785 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -294,16 +398,27 @@
 				Base,
 			);
 			mainGroup = 6E65C8552A571A1C0009C785;
+			packageReferences = (
+				6E619DB32A5ABFC300BEA8FC /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 6E65C85F2A571A1C0009C785 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6E65C85D2A571A1C0009C785 /* IDNowTechnicalTest */,
+				6E619D9C2A5ABC9900BEA8FC /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E619D9B2A5ABC9900BEA8FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E65C85C2A571A1C0009C785 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +431,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E619D992A5ABC9900BEA8FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E619DB22A5ABD3700BEA8FC /* TestHelpers.swift in Sources */,
+				6E619DAA2A5ABCE300BEA8FC /* TreasureHuntScreenTest.swift in Sources */,
+				6E619DBB2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift in Sources */,
+				6E619DAF2A5ABD1000BEA8FC /* MockedServices.swift in Sources */,
+				6E619DAD2A5ABD0A00BEA8FC /* Mock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E65C85A2A571A1C0009C785 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,8 +459,11 @@
 				6E619D662A599D6600BEA8FC /* AppDelegate.swift in Sources */,
 				6EFE06482A5969A300B4E02C /* TreasureHuntDetailView.swift in Sources */,
 				6EFE06462A5968E400B4E02C /* ErrorView.swift in Sources */,
+				6E619DB92A5AC56100BEA8FC /* MockedTreasureHunt.swift in Sources */,
+				6E619D922A5AB4C700BEA8FC /* ViewInspectionHelper.swift in Sources */,
 				6E65C8852A573DEB0009C785 /* AppEnvironment.swift in Sources */,
 				6E65C88D2A57465F0009C785 /* AppState.swift in Sources */,
+				6E619DB72A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift in Sources */,
 				6E619D682A59A60B00BEA8FC /* ApiClientHelper.swift in Sources */,
 				6E619D6E2A59BBE800BEA8FC /* TreasureHuntDetailViewModel.swift in Sources */,
 				6E619D742A59F09200BEA8FC /* PrettyButton.swift in Sources */,
@@ -352,7 +482,58 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E619DA22A5ABC9900BEA8FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E65C85D2A571A1C0009C785 /* IDNowTechnicalTest */;
+			targetProxy = 6E619DA12A5ABC9900BEA8FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6E619DA42A5ABC9900BEA8FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E5V473SMB4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srollin.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDNowTechnicalTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IDNowTechnicalTest";
+			};
+			name = Debug;
+		};
+		6E619DA52A5ABC9900BEA8FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E5V473SMB4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srollin.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDNowTechnicalTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IDNowTechnicalTest";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		6E65C86B2A571A1E0009C785 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -545,6 +726,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E619DA32A5ABC9900BEA8FC /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E619DA42A5ABC9900BEA8FC /* Debug */,
+				6E619DA52A5ABC9900BEA8FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E65C8592A571A1C0009C785 /* Build configuration list for PBXProject "IDNowTechnicalTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -564,6 +754,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E619DB32A5ABFC300BEA8FC /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E619DB42A5ABFC300BEA8FC /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E619DB32A5ABFC300BEA8FC /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E65C8562A571A1C0009C785 /* Project object */;
 }
