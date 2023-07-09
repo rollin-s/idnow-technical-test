@@ -13,7 +13,7 @@ protocol TreasureHuntRepository: IDApiClientRepository {
     func startSearchingTreasure(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
 }
 
-/// API example of some e
+/// API example of some use case we could have with a remote server
 struct ApiTreasureHuntRepository: TreasureHuntRepository {
     
     let session: URLSession

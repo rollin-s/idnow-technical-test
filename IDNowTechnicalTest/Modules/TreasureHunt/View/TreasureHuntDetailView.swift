@@ -79,11 +79,21 @@ private extension TreasureHuntDetailView {
                 .background(Color.Green.victoryGreen)
                 .cornerRadius(12)
         } else {
-            
-            Text("You haven't found the treasure, it's gonna be lost forever now lads")
-                .padding(10)
-                .background(Color.Red.redFailure)
-                .cornerRadius(12)
+            VStack {
+                Text("You haven't found the treasure, it's gonna be lost forever now lads. Try again !!")
+                    .padding(10)
+                    .background(Color.Red.redFailure)
+                    .cornerRadius(12)
+                
+                Button(
+                    "Let's try again and read again the map") {
+                        viewModel.startSearchTreasure(treasureHunt: game)
+                    }
+                    .padding(12)
+                    .cornerRadius(12)
+                    .buttonStyle(GrowingButton())
+                
+            }
         }
     }
 }
