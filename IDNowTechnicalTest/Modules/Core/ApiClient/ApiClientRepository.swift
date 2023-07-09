@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-protocol IDApiClientRepository {
+protocol ApiClientRepository {
     var session: URLSession { get }
     var baseURL: String { get }
 }
 
-extension IDApiClientRepository {
+extension ApiClientRepository {
     func call<Value>(endpoint: APICall, httpCodes: HTTPCodes = .success) -> AnyPublisher<Value, Error>
         where Value: Decodable {
         do {

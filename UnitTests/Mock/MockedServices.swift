@@ -25,7 +25,6 @@ extension DIInjector.Services {
 }
 
 // MARK: - CountriesService
-
 struct MockedTreasureHuntService: Mock, ATreasureHuntService {
     
     enum Action: Equatable {
