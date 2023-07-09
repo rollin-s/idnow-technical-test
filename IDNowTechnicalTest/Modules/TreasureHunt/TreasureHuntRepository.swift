@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol TreasureHuntRepository: IDApiClientRepository {
+protocol TreasureHuntRepository: ApiClientRepository {
     func createNewGame() -> AnyPublisher<[TreasureHuntGame], Error>
     func startSearchingTreasure(game: TreasureHuntGame) -> AnyPublisher<Bool, Error>
 }
