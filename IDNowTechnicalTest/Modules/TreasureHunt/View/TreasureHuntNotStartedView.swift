@@ -10,10 +10,15 @@ import SwiftUI
 
 struct TreasureHuntNotStarted: View {
     var body: some View {
-        Text("The treasure hunt haven't been started yet... Brace yourself fols")
+        Text("The treasure hunt haven't been started yet... Brace yourself fools")
+            .font(.system(size: 16, weight: .bold, design: .rounded))
             .padding(16)
-            .frame(alignment: .center)
-            .foregroundColor(.indigo)// We don't need any NotRequestView in our case, but might be usefull if we have a list loader first
+            .foregroundColor(.white)
+            .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
+            .background(
+                Color.Blue.blueNotStarted
+            )
+            .cornerRadius(12)
 
     }
 }

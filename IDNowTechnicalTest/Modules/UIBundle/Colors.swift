@@ -39,4 +39,8 @@ extension Color {
     struct Red {
         static let redFailure = Color(hex: "#C84630")
     }
+    
+    struct Blue {
+        static let blueNotStarted = Color(hex: "#324A5F")
+    }
 }
