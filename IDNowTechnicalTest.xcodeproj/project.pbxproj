@@ -27,7 +27,6 @@
 		6E619DB72A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DB62A5AC27A00BEA8FC /* TreasureHuntNotStartedView.swift */; };
 		6E619DB92A5AC56100BEA8FC /* MockedTreasureHunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DB82A5AC56100BEA8FC /* MockedTreasureHunt.swift */; };
 		6E619DBB2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E619DBA2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift */; };
-		6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65C8632A571A1C0009C785 /* ContentView.swift */; };
 		6E65C8662A571A1E0009C785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8652A571A1E0009C785 /* Assets.xcassets */; };
 		6E65C86A2A571A1E0009C785 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C8692A571A1E0009C785 /* Preview Assets.xcassets */; };
 		6E65C8732A571A6E0009C785 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E65C8722A571A6E0009C785 /* ApiRequest.swift */; };
@@ -79,7 +78,6 @@
 		6E619DB82A5AC56100BEA8FC /* MockedTreasureHunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedTreasureHunt.swift; sourceTree = "<group>"; };
 		6E619DBA2A5AC9EF00BEA8FC /* TreasureHuntDetailViewScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHuntDetailViewScreenTest.swift; sourceTree = "<group>"; };
 		6E65C85E2A571A1C0009C785 /* IDNowTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDNowTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E65C8632A571A1C0009C785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E65C8652A571A1E0009C785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E65C8672A571A1E0009C785 /* IDNowTechnicalTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IDNowTechnicalTest.entitlements; sourceTree = "<group>"; };
 		6E65C8692A571A1E0009C785 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				6E65C8782A573BC30009C785 /* Modules */,
-				6E65C8632A571A1C0009C785 /* ContentView.swift */,
 				6E65C8822A573D7F0009C785 /* SceneDelegate.swift */,
 				6E619D652A599D6600BEA8FC /* AppDelegate.swift */,
 				6E65C8652A571A1E0009C785 /* Assets.xcassets */,
@@ -449,7 +446,6 @@
 			files = (
 				6E619D6C2A59B76300BEA8FC /* CancelBag.swift in Sources */,
 				6E65C8772A573A4D0009C785 /* ApiClientRepository.swift in Sources */,
-				6E65C8642A571A1C0009C785 /* ContentView.swift in Sources */,
 				6EFE06422A5965F600B4E02C /* Optional+Extension.swift in Sources */,
 				6EFE06372A59640900B4E02C /* TreasureHuntScreen.swift in Sources */,
 				6E619D642A599CC900BEA8FC /* TestHelpers.swift in Sources */,

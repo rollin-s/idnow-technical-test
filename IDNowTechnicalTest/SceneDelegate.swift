@@ -18,7 +18,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
         let appModules = AppEnvironment.startApp()
-        let defaultScreen = TreasureHuntScreen(viewModel: TreasureHuntScreen.ViewModel(container: appModules.container))
+        let defaultScreen = TreasureHuntScreen(viewModel: TreasureHuntScreen.ViewModel(container: appModules.container)) // First screen of the app
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: defaultScreen)
